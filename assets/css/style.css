@@ -1,0 +1,60 @@
+main {
+    display: block;
+}
+
+#form {
+    border: solid;
+    border-radius: 25px;
+    padding: 50px;
+    text-align: center;
+    margin: 40px;
+}
+
+#select-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+select {
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 171px;
+    height: 36px;
+}
+
+#date-section {
+    margin-top: 40px; 
+}
+
+label {
+    margin-right: 10px;
+    font-size: 120%;
+    display: block;
+}
+
+#button-section {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+button {
+    width: 250px;
+    height: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#resource-section {
+    border: solid;
+    border-radius: 25px;
+    padding: 50px;
+    text-align: center;
+    margin: 40px;
+}
+
+.footer-container {
+    text-align: center;
+}
