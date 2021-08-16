@@ -58,3 +58,26 @@ button {
 .footer-container {
     text-align: center;
 }
+
+#exchange-div {
+    border: solid;
+    border-radius: 25px;
+    text-align: center;
+    margin: 40px;
+}
+
+#weather-div {
+    border: solid;
+    border-radius: 25px;
+    text-align: center;
+    margin: 40px;
+}
+
+#flight-div {
+    border: solid;
+    border-radius: 25px;
+    text-align: center;
+    margin: 40px;
+}
+
+/* hello */
