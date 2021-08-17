@@ -10,7 +10,7 @@ function getApi(requestUrl) {
       responseText.textContent = response.status;
     }
     return response.json();
-  });
+  }); 
 }
 
 getApi(requestUrl);
