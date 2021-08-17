@@ -1,7 +1,7 @@
 console.log("This is weather JS");
 
 var weatherText = document.getElementById('weather-div');
-var weatherBtn = document.getElementById('btn-weather');
+var mainBtn = document.getElementById('btn-main');
 
 function getWeather(event) {
     event.preventDefault();
@@ -29,4 +29,4 @@ function getWeather(event) {
 
 console.log(weatherBtn);
 
-weatherBtn.addEventListener("click", getWeather);
+mainBtn.addEventListener("click", getWeather);

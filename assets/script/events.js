@@ -1,7 +1,7 @@
-var btnFlightsEl = document.getElementById('btn-flights')
+var btnMainEl = document.getElementById('btn-flights')
 var flightDivEl = document.getElementById('flight-div')
 
-btnFlightsEl.addEventListener('click', showApiData);
+btnMainEl.addEventListener('click', showApiData);
 
 function showApiData(event) {
     event.preventDefault()
