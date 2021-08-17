@@ -29,18 +29,20 @@
     <main id='resources-main'>
         <form id='form'>
             <section id='select-section'>
-                <select id='origin'>
+                <!-- <select id='origin'>
                     <option selected>Select an Origin</option>
-                    <option value="1">New York City</option>
-                    <option value="2">Chicago</option>
-                    <option value="3">Miami</option>
-                </select>
-                <select id='destination'>
+                    <option value="New York City">New York City</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="Miami">Miami</option>
+                </select> -->
+                <input type='text' id='origin' name='origin' placeholder="Enter Origin City"><br>
+                <!-- <select id='destination'>
                     <option selected>Select a Destination</option>
-                    <option value="1">London</option>
-                    <option value="2">Paris</option>
-                    <option value="3">Tokyo</option>
-                </select>
+                    <option value="London">London</option>
+                    <option value="Paris">Paris</option>
+                    <option value="Tokyo">Tokyo</option>
+                </select> -->
+                <input type='text' id='destination' name='destination' placeholder="Enter Destination City"><br>
             </section>
             <section id='date-section'>
                 <label for='date'>Date: </label>
@@ -49,14 +51,14 @@
             <section id='button-section'>
                 <button type="submit" class="btn btn-primary mb-3" id='btn-exchange'>See Exchange Current Rate</button>
                 <button type="submit" class="btn btn-primary mb-3" id='btn-weather'>See Weather Forecast</button>
-                <button type="submit" class="btn btn-primary mb-3" id='btn-flights'>See Flights</button>
+                <button type="submit" class="btn btn-primary mb-3" id='btn-flights'>See Local Events</button>
             </section>
         </form>
         <section id='resource-section'>
             <container id='resource-container'>
                 <div id='exchange-div'>Exchange Rates: </div>
                 <div id='weather-div'>Weather Forecast: </div>
-                <div id='flight-div'>Flights: </div>
+                <div id='flight-div'><h2 id='local-events'>Local Events: </h1></div>
             </container>
         </section>
     </main>
