@@ -36,6 +36,6 @@ function getWeather(event) {
         });
 }
 
-console.log(weatherBtn);
+console.log(mainBtn);
 
 mainBtn.addEventListener("click", getWeather);
