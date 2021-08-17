@@ -3,11 +3,14 @@ var flightDivEl = document.getElementById('flight-div')
 
 btnFlightsEl.addEventListener('click', showApiData);
 
-function showApiData() {
+function showApiData(event) {
     event.preventDefault()
-    console.log('hello')
-
-    var requestUrl = 'http://api.aviationstack.com/v1/flights?access_key=9ddb00655800291e57984740e1b0abc9'
+    
+    var destinationEl = document.getElementById('destination')
+    var citySearch = destinationEl.value
+    console.log(citySearch)
+    
+    var requestUrl = 'https://app.ticketmaster.com/discovery/v2/events.json?city=' + citySearch + '&apikey=jITHRBn97SIAoqceTdmAptHok8NWaIBv'
 
     fetch(requestUrl)
         .then(function (response) {
@@ -18,23 +21,36 @@ function showApiData() {
             return response.json();
         })
         .then(function (data) {
-            console.log(data.data);
-            var mainData = data.data
+            if (typeof data._embedded === 'undefined') {
+                console.log('this was undefined');
+                var eventAlert = document.createElement('p2');
+                eventAlert.textContent = 'NO LOCAL EVENTS IN THE NEAR FUTURE';
+                flightDivEl.append(eventAlert);
+            }
+            console.log(data._embedded.events);
+            var mainData = data._embedded.events
             for (var i = 0; i < mainData.length; i++) {
-                var originAirport = document.createElement('h5');
-                var destinationAirport = document.createElement('h5');
-                var airlineName = document.createElement('p2');
-                var flightNumber = document.createElement('p2');
+                var eventName = document.createElement('h5');
+                var startDate = document.createElement('p2');
+                var eventStatus = document.createElement('p2');
+                var eventLink = document.createElement('p3');
+                var section1 = document.createElement('section');
+                var section2 = document.createElement('section');
 
-                originAirport.textContent = 'Origin Airport: ' + mainData[i].departure.airport
-                destinationAirport.textContent = 'Destination Airport: ' + mainData[i].arrival.airport
-                airlineName.textContent = 'Airline Name: ' + mainData[i].airline.name
-                flightNumber.textContent = 'Flight Number: ' + mainData[i].flight.number
+                eventName.textContent = mainData[i].name;
+                startDate.textContent = 'Date: ' + mainData[i].dates.start.localDate;
+                eventStatus.textContent = 'Status: ' + mainData[i].dates.status.code;
+                eventLink.textContent = mainData[i].url;
 
-                flightDivEl.append(originAirport)
-                flightDivEl.append(destinationAirport)
-                flightDivEl.append(airlineName)
-                flightDivEl.append(flightNumber)
+                flightDivEl.append(section1);
+                flightDivEl.append(section2);
+
+                section1.append(eventName);
+                section1.append(startDate);
+                section1.append(eventStatus);
+                section2.append(eventLink);
+
+                section2.style.marginBottom = '50px';
 
             }
             
@@ -44,3 +60,4 @@ function showApiData() {
         })
 
 }
+
