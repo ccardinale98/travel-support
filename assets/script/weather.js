@@ -1,7 +1,7 @@
 console.log("This is weather JS");
 
 var weatherText = document.getElementById('weather-div');
-var weatherBtn = document.getElementById('btn-weather');
+var weatherBtn = document.getElementById('btn-main');
 
 function getWeather(event) {
     event.preventDefault();
@@ -22,7 +22,7 @@ function getWeather(event) {
             console.log(data);
             var tempData = document.createElement("p");
             var humData = document.createElement("p");
-            var descriptionData = document.createElement("p")
+            var descriptionData = document.createElement("p");
             var temp = data.list[0].main.temp;
             var humidity = data.list[0].main.humidity;
             var description = data.list[0].weather[0].description;
