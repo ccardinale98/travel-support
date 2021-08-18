@@ -1,39 +1,48 @@
-#resources-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 #resources-body {
     background-image: url('../images/gettyimages-1163135121-640x640.jpg');
     background-size: cover;
 }
 
-/* #origin {
-    margin-right: 20px;
-}
-
-#destination {
-    margin-left: 20px;
-} */
-
 #form {
     border: solid;
     border-radius: 25px;
-    padding: 50px;
-    text-align: center;
-    margin: 40px;
-    max-width: 1500px;
-    width: 70vw;
     background-color: whitesmoke;
+    text-align: center;
+    padding: 50px;
+}
+
+#form-row {
+    padding: 40px 0px 40px 0px;
+}
+
+#origin {
+    border-radius: 25px;
+    text-align: center;
+}
+
+#destination {
+    border-radius: 25px;
+    text-align: center;
+}
+
+#exchange {
+    border: solid;
+    border-radius: 25px;
+    background-color: whitesmoke;
+    margin-bottom: 16px;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
 }
 
 #select-section {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap; 
-    padding: 10px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: column; 
+    /* padding: 10px; */
 }
 
 select {
@@ -44,11 +53,15 @@ select {
 }
 
 #date-section {
-    margin-top: 40px; 
+    margin-top: 20px; 
+}
+
+#date-input {
+    border-radius: 25px;
+    text-align: center;
 }
 
 label {
-    margin-right: 10px;
     font-size: 120%;
     display: block;
 }
@@ -70,12 +83,6 @@ button {
 #resource-section {
     border: solid;
     border-radius: 25px;
-    padding: 50px;
-    text-align: center;
-    margin: 40px;
-    max-width: 1500px;
-    width: 70vw;
-    text-align: center;
     background-color: whitesmoke;
 }
 
@@ -97,6 +104,7 @@ button {
     text-align: center;
     margin: 40px;
     background-color: whitesmoke;
+    padding: 25px;
 }
 
 #flight-div {

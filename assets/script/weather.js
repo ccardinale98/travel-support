@@ -1,7 +1,7 @@
 console.log("This is weather JS");
 
 var weatherText = document.getElementById('weather-div');
-var weatherBtn = document.getElementById('btn-main');
+var mainBtn = document.getElementById('btn-main');
 
 function getWeather(event) {
     event.preventDefault();
@@ -36,6 +36,6 @@ function getWeather(event) {
         });
 }
 
-console.log(weatherBtn);
+console.log(mainBtn);
 
-weatherBtn.addEventListener("click", getWeather);
+mainBtn.addEventListener("click", getWeather);

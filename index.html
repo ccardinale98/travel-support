@@ -26,22 +26,12 @@
             </div>
           </nav>
     </header>
+    <div class='container'>
     <main id='resources-main'>
-        <form id='form'>
+      <div id='form-row' class='row justify-content-between'>
+        <form id='form' class='col-md-7'>
             <section id='select-section'>
-                <!-- <select id='origin'>
-                    <option selected>Select an Origin</option>
-                    <option value="New York City">New York City</option>
-                    <option value="Chicago">Chicago</option>
-                    <option value="Miami">Miami</option>
-                </select> -->
                 <input type='text' id='origin' name='origin' placeholder="Enter Origin City"><br>
-                <!-- <select id='destination'>
-                    <option selected>Select a Destination</option>
-                    <option value="London">London</option>
-                    <option value="Paris">Paris</option>
-                    <option value="Tokyo">Tokyo</option>
-                </select> -->
                 <input type='text' id='destination' name='destination' placeholder="Enter Destination City"><br>
             </section>
             <section id='date-section'>
@@ -49,18 +39,23 @@
                 <input type='date' id='date-input' name='trip-date'>
             </section>
             <section id='button-section'>
-
-                <button type="submit" class="btn btn-primary mb-3" id='btn-main'>Weather/Events at Destination</button>
+                <button type="submit" class="btn btn-primary mb-3" id='btn-main'>Results</button>
             </section>
         </form>
-        <section id='resource-section'>
+        <section id='exchange' class='col-md-4'>
+          <h1>Exchange Rate:</h1>
+        </section>
+      </div>   
+      <div id='resource-row' class='row'>
+        <section id='resource-section' class='col-md-12'>
             <container id='resource-container'>
-                <div id='exchange-div'>Currency Rates: </div>
-                <div id='weather-div'>Weather Forecast: </div>
+                <div id='weather-div'><h2 id='local-events'>Weather Forecast: </h2></div>
                 <div id='flight-div'><h2 id='local-events'>Local Events: </h1></div>
             </container>
         </section>
+      </div>
     </main>
+    </div>
     <div class="footer-container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
           <div class="col-md-4 d-flex align-items-center">
@@ -73,6 +68,6 @@
       </div>
     <script src="./assets/script/exchange.js"></script>
     <script src="./assets/script/weather.js"></script>
-    <script src="./assets/script/flight.js"></script>
+    <script src="./assets/script/events.js"></script>
 </body>
 </html>
