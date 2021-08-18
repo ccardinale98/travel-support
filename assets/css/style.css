@@ -42,7 +42,6 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     flex-direction: column; 
-    /* padding: 10px; */
 }
 
 select {
@@ -52,11 +51,13 @@ select {
     height: 36px;
 }
 
-#date-section {
-    margin-top: 20px; 
+
+#arrival-input {
+    border-radius: 25px;
+    text-align: center;
 }
 
-#date-input {
+#departure-input {
     border-radius: 25px;
     text-align: center;
 }
@@ -64,6 +65,7 @@ select {
 label {
     font-size: 120%;
     display: block;
+    margin-top: 20px;
 }
 
 #button-section {

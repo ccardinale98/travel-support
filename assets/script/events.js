@@ -1,12 +1,16 @@
 var btnMainEl = document.getElementById("btn-main");
 var flightDivEl = document.getElementById("flight-div");
 var weatherDivEl = document.getElementById("weather-div");
+var arrivalInputEl = document.getElementById('arrival-input');
+var departureInputEl = document.getElementById('departure-input');
 
 btnMainEl.addEventListener("click", showApiData);
 
 function showApiData(event) {
   event.preventDefault();
-
+  
+  var arrivalDate = arrivalInputEl.value + 'T00:00:00Z'
+  var departureDate = departureInputEl.value + 'T23:59:59Z'
   var destinationEl = document.getElementById("destination");
   var citySearch = destinationEl.value;
   console.log(citySearch);
@@ -26,6 +30,10 @@ function showApiData(event) {
   var requestUrl =
     "https://app.ticketmaster.com/discovery/v2/events.json?city=" +
     citySearch +
+    "&startDateTime=" +
+    arrivalDate +
+    "&endDateTime=" +
+    departureDate +
     "&apikey=jITHRBn97SIAoqceTdmAptHok8NWaIBv";
 
   fetch(requestUrl)
