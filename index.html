@@ -13,61 +13,14 @@
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
       crossorigin="anonymous"
     ></script>
-    <title>Trip Resources Main</title>
+    <title>Trip Resources Home</title>
 </head>
-<body id='resources-body'>
-    <header>
-        <nav class="navbar navbar-light bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#"  onclick="location.href = './home.html';">
-                <img src="./assets/images/plane-2359613-1987480.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
-                Travel Resources
-              </a>
-            </div>
-          </nav>
-    </header>
-    <div class='container'>
-    <main id='resources-main'>
-      <div id='form-row' class='row justify-content-between'>
-        <form id='form' class='col-md-7'>
-            <section id='select-section'>
-                <input type='text' id='origin' name='origin' placeholder="Enter Origin City"><br>
-                <input type='text' id='destination' name='destination' placeholder="Enter Destination City"><br>
-            </section>
-            <section id='date-section'>
-                <label for='date'>Date: </label>
-                <input type='date' id='date-input' name='trip-date'>
-            </section>
-            <section id='button-section'>
-                <button type="submit" class="btn btn-primary mb-3" id='btn-main'>Results</button>
-            </section>
-        </form>
-        <section id='exchange' class='col-md-4'>
-          <h1>Exchange Rate:</h1>
-        </section>
-      </div>   
-      <div id='resource-row' class='row'>
-        <section id='resource-section' class='col-md-12'>
-            <container id='resource-container'>
-                <div id='weather-div'><h2 id='local-events'>Weather Forecast: </h2></div>
-                <div id='flight-div'><h2 id='local-events'>Local Events: </h1></div>
-            </container>
-        </section>
-      </div>
-    </main>
-    </div>
-    <div class="footer-container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-          <div class="col-md-4 d-flex align-items-center">
-            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-              <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
-            </a>
-            <span class="text-muted">&copy; 2021 Travel Resources</span>
-          </div>
-        </footer>
-      </div>
-    <script src="./assets/script/exchange.js"></script>
-    <script src="./assets/script/weather.js"></script>
-    <script src="./assets/script/events.js"></script>
+<body id='home-body'>
+<main id='home-main'>
+  <header id='type-header'>
+    <h1 id='home-title'>Travel Resources</h1>
+  </header>
+  <button onclick="location.href = './index.html';" id='welcome-button'>Welcome</button>
+</main>
 </body>
 </html>
