@@ -1,170 +1,147 @@
-#resources-body {
-    background-image: url('../images/gettyimages-1163135121-640x640.jpg');
-    background-size: cover;
-}
-
-#form {
-    border: solid;
-    border-radius: 25px;
-    background-color: whitesmoke;
-    text-align: center;
-    padding: 50px;
-}
-
-#form-row {
-    padding: 40px 0px 40px 0px;
-}
-
-#origin {
-    border-radius: 25px;
-    text-align: center;
-}
-
-#destination {
-    border-radius: 25px;
-    text-align: center;
-}
-
-#exchange {
-    border: solid;
-    border-radius: 25px;
-    background-color: whitesmoke;
-    margin-bottom: 16px;
-    padding: 50px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    overflow: hidden;
-}
-
-#select-section {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
-select {
-    margin-left: 20px;
-    margin-right: 20px;
-    width: 171px;
-    height: 36px;
-}
-
-
-#arrival-input {
-    border-radius: 25px;
-    text-align: center;
-}
-
-#departure-input {
-    border-radius: 25px;
-    text-align: center;
-}
-
-label {
-    font-size: 120%;
-    display: block;
-    margin-top: 20px;
-}
-
-#button-section {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-button {
-    width: 250px;
-    height: 50px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-#resource-section {
-    border: solid;
-    border-radius: 25px;
-    background-color: whitesmoke;
-}
-
-.footer-container {
-    text-align: center;
-}
-
-#exchange-div {
-    border: solid;
-    border-radius: 25px;
-    text-align: center;
-    margin: 40px;
-    background-color: whitesmoke;
-}
-
-#weather-div {
-    border: solid;
-    border-radius: 25px;
-    text-align: center;
-    margin: 40px;
-    background-color: whitesmoke;
-    padding: 25px;
-}
-
-#flight-div {
-    border: solid;
-    border-radius: 25px;
-    text-align: center;
-    margin: 40px;
-    background-color: whitesmoke;
-}
-
-p2 {
-    padding: 10px;
-}
-
-#flight-div {
-    padding: 25px;
-}
-
-#local-events {
-    margin-bottom: 20px;
-}
-
-div.modal-content {
-    max-width: 400px;
-}
-
-
-
-
-
-
-
 /* css for home page */
+/* ------------------------------------------------------------------------- */
 #home-body {
-    background-image: url('../images/giphy-downsized-large.gif');
-    background-size: cover;
-    padding: 0;
-    margin: 0;
-    text-align: center;
+  background-image: url("../images/giphy-downsized-large.gif");
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
 
 #home-main {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 #home-title {
-    font-size: 100px;
-    color: whitesmoke;
+  font-size: 100px;
+  color: whitesmoke;
 }
 
 #welcome-button {
-    margin-top: 30px;
-    font-size: 50px;
-    height: 100px;
-    border-radius: 25px;
+  margin-top: 30px;
+  font-size: 50px;
+  height: 100px;
+  border-radius: 25px;
+}
+
+/* css for resources page */
+/* ------------------------------------------------------------------------- */
+#resources-body {
+  background-image: url("../images/gettyimages-1163135121-640x640.jpg");
+  background-size: cover;
+}
+
+#form {
+  border: solid;
+  border-radius: 25px;
+  background-color: whitesmoke;
+  text-align: center;
+  padding: 50px;
+}
+
+#form-row {
+  padding: 40px 0px 40px 0px;
+}
+
+#origin {
+  border-radius: 25px;
+  text-align: center;
+}
+
+#destination {
+  border-radius: 25px;
+  text-align: center;
+}
+
+#exchange {
+  border: solid;
+  border-radius: 25px;
+  background-color: whitesmoke;
+  margin-bottom: 16px;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+#input-section {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+#arrival-input {
+  border-radius: 25px;
+  text-align: center;
+}
+
+#departure-input {
+  border-radius: 25px;
+  text-align: center;
+}
+
+label {
+  font-size: 120%;
+  display: block;
+  margin-top: 20px;
+}
+
+#button-section {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+button {
+  width: 250px;
+  height: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#resource-section {
+  border: solid;
+  border-radius: 25px;
+  background-color: whitesmoke;
+}
+
+.footer-container {
+  text-align: center;
+}
+
+#weather-div {
+  border: solid;
+  border-radius: 25px;
+  text-align: center;
+  margin: 40px;
+  background-color: whitesmoke;
+  padding: 25px;
+}
+
+#flight-div {
+  border: solid;
+  border-radius: 25px;
+  text-align: center;
+  margin: 40px;
+  background-color: whitesmoke;
+}
+
+#flight-div {
+  padding: 25px;
+}
+
+#local-events {
+  margin-bottom: 20px;
+}
+
+div.modal-content {
+  max-width: 400px;
 }
