@@ -1,6 +1,7 @@
 var select = document.querySelectorAll("select");
 var input = document.querySelectorAll(".exchange-input");
 
+
 var requestUrl =
   "http://api.exchangeratesapi.io/v1/latest?access_key=af421db273008dfe472d3260a6a0b4e2";
 
@@ -21,6 +22,7 @@ async function getCurrency() {
     select[i].innerHTML = html;
   }
 
+  
   function convert(i, a) {
     input[i].value =
     (input[a].value * rates[select[i].value]) / rates[select[a].value];
@@ -43,3 +45,9 @@ async function getCurrency() {
   //   });
 }
 getCurrency();
+
+
+// tried - Instead of step="any", which allows for any number of decimal places, use step=".01", which allows up to two decimal places in html .
+// tried - Using JavaScript validation
+// tried - javascript limit input to 2 decimal places
+// Might have something to do with the api that i used .. (I'm not entirely sure..)

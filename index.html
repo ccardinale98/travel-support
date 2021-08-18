@@ -44,17 +44,17 @@
         </form>
         <section id='exchange' class='col-md-4'>
           <h1>Exchange Rate:</h1>
-          <div>
-            <input type="number" class="exchange-input"/>
+          <div class="exchange-block">
+            <input type="number" class="exchange-input" oninput="input(this)">
             <select>
               <!-- <option value="currency">Currency</option>  -->
             </select>
           </div>
       
-      <span> = </span>
+      <p id="equal"> = </p>
       
-          <div>
-            <input type="number" class="exchange-input"/>
+          <div class="exchange-block">
+            <input type="number" class="exchange-input" oninput="input(this)">
             <select>
               <!-- <option value="currency">Currency</option>  -->
             </select>
@@ -81,8 +81,10 @@
           </div>
         </footer>
       </div>
+    
     <script src="./assets/script/exchange.js"></script>
     <script src="./assets/script/weather.js"></script>
     <script src="./assets/script/events.js"></script>
+    
 </body>
 </html>

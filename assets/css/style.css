@@ -32,7 +32,7 @@
   margin-bottom: 16px;
   padding: 50px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   flex-wrap: wrap;
   overflow: hidden;
 }
@@ -50,12 +50,26 @@ select {
   margin-left: 10px;
   letter-spacing: 2px;
   border: 1px solid black;
+  text-align: center;
 }
 
-span {
-  color: blue;
-  font-size: 2em;
-  font-weight: 900px;
+.exchange-block{
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#equal {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+  margin-bottom: 0;
+}
+
+#exchange h1 {
+  margin-bottom: 50px;
+
 }
 
 .exchange-input {
@@ -63,6 +77,7 @@ span {
   height: 30px;
   border: 1px solid black;
   outline: none;
+  margin: auto;
 }
 
 #date-section {
