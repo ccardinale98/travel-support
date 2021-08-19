@@ -12,7 +12,7 @@
 
 <body id='resources-body'>
     <header>
-        <nav class="navbar navbar-light bg-light">
+        <nav class="navbar navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
               <a class="navbar-brand" href="#"  onclick="location.href = './index.html';">
                 <img src="./assets/images/plane-2359613-1987480.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
@@ -57,14 +57,20 @@
               <!-- <option value="currency">Currency</option>  -->
             </select>
           </div>
-          <img src="./assets/images/Currency-Exchange_2-1.jpg" width="250" height="150">
+          <img id='exchange-image' src="./assets/images/Currency-Exchange_2-1.jpg" width="250" height="150">
         </section>
       </div>
       <div id='resource-row' class='row'>
         <section id='resource-section' class='col-md-12'>
             <container id='resource-container'>
-                <div id='weather-div'><h2 id='local-events'>Weather Forecast: </h2></div>
-                <div id='flight-div'><h2 id='local-events'>Local Events: </h1></div>
+                <div id='weather-div'>
+                  <h2 id='local-events'>Weather Forecast: </h2>
+                  <img id='open-weather' src='./assets/images/logo.png'>
+                </div>
+                <div id='flight-div'>
+                  <h2 id='local-events'>Local Events: </h1>
+                  <img id='ticket-master' src='./assets/images/Ticketmaster-Emblem.png'>
+                </div>
             </container>
         </section>
       </div>
