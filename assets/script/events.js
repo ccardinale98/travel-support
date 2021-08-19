@@ -64,13 +64,13 @@ function showApiData(event) {
         var eventName = document.createElement("h5");
         var startDate = document.createElement("p2");
         var eventStatus = document.createElement("p2");
-        var eventLink = document.createElement("p3");
+        var eventLink = document.createElement("a");
         var section1 = document.createElement("section");
         var section2 = document.createElement("section");
 
         eventName.textContent = mainData[i].name;
         startDate.textContent = "Date: " + mainData[i].dates.start.localDate;
-        eventStatus.textContent = "Status: " + mainData[i].dates.status.code;
+        eventStatus.textContent = " | Status: " + mainData[i].dates.status.code;
         eventLink.textContent = mainData[i].url;
 
         flightDivEl.append(section1);
