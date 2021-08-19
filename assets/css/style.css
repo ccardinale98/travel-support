@@ -209,36 +209,6 @@ button {
   margin-bottom: 20px;
 }
 
-
-/* css for home page */
-#home-body {
-  background-image: url("../images/giphy-downsized-large.gif");
-  background-size: cover;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-
-#home-main {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-#home-title {
-  font-size: 100px;
-  color: whitesmoke;
-}
-
-#welcome-button {
-  margin-top: 30px;
-  font-size: 50px;
-  height: 100px;
-  border-radius: 25px;
-
 div.modal-content {
   max-width: 400px;
 
