@@ -26,10 +26,7 @@ async function getCurrency() {
   function convert(i, a) {
     input[i].value =
     ((input[a].value * rates[select[i].value]) / rates[select[a].value]).toFixed(2);
-    // input[i].value = input[i].value.toFixed(2)
-    // var num = input[i].value
-    // var n = num.toFixed(2);
-    // document.getElementById("input").innerHTML = n;
+    
   }
 //   console.log(rates[select[1].value]); //rates
   input[0].addEventListener("keyup", () => convert(1, 0));
@@ -46,9 +43,3 @@ async function getCurrency() {
   //   });
 }
 getCurrency();
-
-
-// tried - Instead of step="any", which allows for any number of decimal places, use step=".01", which allows up to two decimal places in html .
-// tried - Using JavaScript validation
-// tried - javascript limit input to 2 decimal places
-// Might have something to do with the api that i used .. (I'm not entirely sure..)
