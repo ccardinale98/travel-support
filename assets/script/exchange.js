@@ -25,7 +25,7 @@ async function getCurrency() {
   
   function convert(i, a) {
     input[i].value =
-    (input[a].value * rates[select[i].value]) / rates[select[a].value];
+    ((input[a].value * rates[select[i].value]) / rates[select[a].value]).toFixed(2);
     // var num = input[i].value
     // var n = num.toFixed(2);
     // document.getElementById("input").innerHTML = n;
