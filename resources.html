@@ -42,8 +42,23 @@
         </form>
         <section id='exchange' class='col-md-4'>
           <h1>Exchange Rate:</h1>
+          <div class="exchange-block">
+            <input type="number" class="exchange-input" oninput="input(this)">
+            <select>
+              <!-- <option value="currency">Currency</option>  -->
+            </select>
+          </div>
+      
+          <p id="equal"> = </p>
+      
+          <div class="exchange-block">
+            <input type="number" class="exchange-input" oninput="input(this)">
+            <select>
+              <!-- <option value="currency">Currency</option>  -->
+            </select>
+          </div>
         </section>
-      </div>   
+      </div>
       <div id='resource-row' class='row'>
         <section id='resource-section' class='col-md-12'>
             <container id='resource-container'>
