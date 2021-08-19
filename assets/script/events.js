@@ -1,31 +1,46 @@
 var btnMainEl = document.getElementById("btn-main");
 var flightDivEl = document.getElementById("flight-div");
 var weatherDivEl = document.getElementById("weather-div");
+var arrivalInputEl = document.getElementById('arrival-input');
+var departureInputEl = document.getElementById('departure-input');
+
+btnMainEl.addEventListener('click', function () {
+  flightDivEl.innerHTML = ''
+  var h2ElEvents = document.createElement('h2')
+  h2ElEvents.textContent = 'Local Events: '
+  flightDivEl.append(h2ElEvents);
+})
+
+btnMainEl.addEventListener('click', function () {
+  weatherDivEl.innerHTML = ''
+  var h2ElWeather = document.createElement('h2')
+  h2ElWeather.textContent = 'Weather Forecast: '
+  weatherDivEl.append(h2ElWeather);
+})
 
 btnMainEl.addEventListener("click", showApiData);
 
+
 function showApiData(event) {
   event.preventDefault();
-
+  var arrivalDate = arrivalInputEl.value + 'T00:00:00Z'
+  var departureDate = departureInputEl.value + 'T23:59:59Z'
   var destinationEl = document.getElementById("destination");
   var citySearch = destinationEl.value;
   console.log(citySearch);
 
-  if (citySearch === "") {
-    console.log("empty destination");
-    var noDestinationWeather = document.createElement("h3");
-    noDestinationWeather.textContent =
-      "Please include a city name in the destination field!";
-    var noDestinationEvent = document.createElement("h3");
-    noDestinationEvent.textContent =
-      "Please include a city name in the destination field!";
-    flightDivEl.append(noDestinationEvent);
-    weatherDivEl.append(noDestinationWeather);
+  if (citySearch === "" || arrivalInputEl.value === '' || departureInputEl.value === '') {
+    console.log("empty field");
+    $('#myModal').modal('toggle');
     return;
   }
   var requestUrl =
     "https://app.ticketmaster.com/discovery/v2/events.json?city=" +
     citySearch +
+    "&startDateTime=" +
+    arrivalDate +
+    "&endDateTime=" +
+    departureDate +
     "&apikey=jITHRBn97SIAoqceTdmAptHok8NWaIBv";
 
   fetch(requestUrl)
@@ -40,7 +55,7 @@ function showApiData(event) {
       if (typeof data._embedded === "undefined") {
         console.log("this was undefined");
         var eventAlert = document.createElement("p2");
-        eventAlert.textContent = "NO LOCAL EVENTS IN THE NEAR FUTURE";
+        eventAlert.textContent = "NO LOCAL EVENTS DURING TRIP";
         flightDivEl.append(eventAlert);
       }
       console.log(data._embedded.events);
