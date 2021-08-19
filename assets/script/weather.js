@@ -56,7 +56,7 @@ function getWeather(event) {
             return response.json();
         })
         .then(function (data) {
-            console.log(data);
+            console.log(data.list.length);
 
             // var tempData = document.createElement("p");
             // var temp = data.list[0].main.temp;
@@ -70,7 +70,7 @@ function getWeather(event) {
             // tempData.textContent = ("The temperature in "+citySearch+" on " +monthInEng+" "+dateNum+" is " +tempInF+ " degree F and the weather condition is " + description);
             // weatherText.append(tempData);
                         
-            for (i = 0; i < 40; i+=8){
+            for (i = 0; i < data.list.length; i+=8){
                 var tempData = document.createElement("p");
                 var temp = data.list[i].main.temp;
                 var tempInF = ((((temp - 273.15) * 9) / 5) + 32).toFixed(2);
@@ -80,7 +80,7 @@ function getWeather(event) {
                 var dateNum = timeStampUnix.getDate();
                 var description = data.list[i].weather[0].description;
 
-                tempData.textContent = ("The temperature in " + citySearch + " on " + monthInEng + " " + dateNum + " is " + tempInF + " degree F and the weather condition is " + description);
+                tempData.textContent = ("The temperature in " + citySearch + " on " + monthInEng + " " + dateNum + " is " + tempInF + "°F and the weather condition is " + description);
                 weatherText.append(tempData);
             }
 
