@@ -38,7 +38,7 @@ var mainBtn = document.getElementById('btn-main');
 //         });
 // }
 
-// ----------------------------------------------------------------------------------------------------------
+// --------------------------------function below displays multi-day weather-------------------------------------------------
 
 
 function getWeather(event) {
@@ -48,7 +48,7 @@ function getWeather(event) {
     var citySearch = destinationEl.value;
     console.log(citySearch);
 
-    var weatherUrl = "https://api.openweathermap.org/data/2.5/forecast?q="+citySearch+"&appid=8700e57210e221e9d8ed86f8673042c4";
+    var weatherUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + citySearch + "&appid=8700e57210e221e9d8ed86f8673042c4";
     fetch(weatherUrl)
         .then(function (response) {
             console.log(response);
@@ -56,18 +56,34 @@ function getWeather(event) {
             return response.json();
         })
         .then(function (data) {
-            console.log(data);
-            var tempData = document.createElement("p");
-            var temp = data.list[0].main.temp;
-            var tempInF = ((((temp - 273.15) *9)/5) + 32).toFixed(2);
-            var timeStampUnix = new Date((data.list[0].dt)*1000);
-            var months = ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
-            var monthInEng = months[timeStampUnix.getMonth()];
-            var dateNum = timeStampUnix.getDate();
-            var description = data.list[0].weather[0].description;
+            console.log(data.list.length);
 
-            tempData.textContent = ("The temperature in "+citySearch+" on " +monthInEng+" "+dateNum+" is " +tempInF+ " degree F and the weather condition is " + description);
-            weatherText.append(tempData);
+            // var tempData = document.createElement("p");
+            // var temp = data.list[0].main.temp;
+            // var tempInF = ((((temp - 273.15) *9)/5) + 32).toFixed(2);
+            // var timeStampUnix = new Date((data.list[0].dt)*1000);
+            // var months = ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+            // var monthInEng = months[timeStampUnix.getMonth()];
+            // var dateNum = timeStampUnix.getDate();
+            // var description = data.list[0].weather[0].description;
+
+            // tempData.textContent = ("The temperature in "+citySearch+" on " +monthInEng+" "+dateNum+" is " +tempInF+ " degree F and the weather condition is " + description);
+            // weatherText.append(tempData);
+                        
+            for (i = 0; i < data.list.length; i+=8){
+                var tempData = document.createElement("p");
+                var temp = data.list[i].main.temp;
+                var tempInF = ((((temp - 273.15) * 9) / 5) + 32).toFixed(2);
+                var timeStampUnix = new Date((data.list[i].dt) * 1000);
+                var months = ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+                var monthInEng = months[timeStampUnix.getMonth()];
+                var dateNum = timeStampUnix.getDate();
+                var description = data.list[i].weather[0].description;
+
+                tempData.textContent = ("The temperature in " + citySearch + " on " + monthInEng + " " + dateNum + " is " + tempInF + "°F and the weather condition is " + description);
+                weatherText.append(tempData);
+            }
+
         });
 }
 
