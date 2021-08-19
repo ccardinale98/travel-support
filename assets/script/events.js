@@ -70,9 +70,20 @@ function showApiData(event) {
 
         eventName.textContent = mainData[i].name;
         startDate.textContent = "Date: " + mainData[i].dates.start.localDate;
+        
         eventStatus.textContent = " | Status: " + mainData[i].dates.status.code;
-        eventLink.textContent = mainData[i].url;
+        if (eventStatus.textContent === ' | Status: cancelled') {
+          eventStatus.style.color = 'red';
+        } else if (eventStatus.textContent === ' | Status: rescheduled') {
+          eventStatus.style.color = 'orange';
+        } else {
+          eventStatus.style.color = 'green';
+        }
 
+        eventLink.textContent = mainData[i].url;
+        eventLink.href = mainData[i].url;
+        eventLink.title = 'link';
+        
         flightDivEl.append(section1);
         flightDivEl.append(section2);
 

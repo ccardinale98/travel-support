@@ -19,7 +19,7 @@
 
 #home-title {
   font-size: 100px;
-  color: whitesmoke;
+  color: #343A40;
 }
 
 #welcome-button {
@@ -27,6 +27,8 @@
   font-size: 50px;
   height: 100px;
   border-radius: 25px;
+  background-color: #343A40;
+  color: whitesmoke;
 }
 
 /* css for resources page */
@@ -39,9 +41,33 @@
 #form {
   border: solid;
   border-radius: 25px;
-  background-color: whitesmoke;
+  background-color: #343A40;
   text-align: center;
   padding: 50px;
+  margin-top: 60px;
+  color: whitesmoke;
+}
+
+#form:hover {
+  border-style: groove;
+}
+
+#exchange:hover {
+  border-style: groove;
+}
+
+#resource-section:hover {
+  border-style: groove;
+}
+
+#open-weather {
+  height: 128px;
+  width: 300px;
+}
+
+#ticket-master {
+  height: 128px;
+  width: 300px;
 }
 
 #form-row {
@@ -51,24 +77,33 @@
 #origin {
   border-radius: 25px;
   text-align: center;
+  color: #343A40;
 }
 
 #destination {
   border-radius: 25px;
   text-align: center;
+  color: #343A40;
 }
 
 #exchange {
   border: solid;
   border-radius: 25px;
-  background-color: whitesmoke;
   margin-bottom: 16px;
+  margin-top: 60px;
   padding: 50px;
   display: flex;
-
+  justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
   overflow: hidden;
+  background-color: #343A40;
+  color: whitesmoke;
+}
+
+#exchange-image {
+  border-radius: 25px;
+  margin: 20px auto auto auto;
 }
 
 #select-section {
@@ -85,6 +120,7 @@ select {
   letter-spacing: 2px;
   border: 1px solid black;
   text-align: center;
+  height: 30px;
 }
 
 .exchange-block{
@@ -112,6 +148,11 @@ select {
   border: 1px solid black;
   outline: none;
   margin: auto;
+  color: #343A40;
+}
+
+select{
+  color: #343A40;
 }
 
 #date-section {
@@ -119,10 +160,10 @@ select {
 }
 
 #date-input {
-
   justify-content: center;
   flex-wrap: wrap;
   overflow: hidden;
+  color: #343A40;
 }
 
 #input-section {
@@ -135,21 +176,19 @@ select {
 #arrival-input {
   border-radius: 25px;
   text-align: center;
+  color: #343A40;
 }
 
 #departure-input {
-
   border-radius: 25px;
   text-align: center;
+  color: #343A40;
 }
 
 label {
   font-size: 120%;
   display: block;
-
-
   margin-top: 20px;
-
 }
 
 #button-section {
@@ -169,7 +208,8 @@ button {
 #resource-section {
   border: solid;
   border-radius: 25px;
-  background-color: whitesmoke;
+  background-color: #343A40;
+  color: whitesmoke;
 }
 
 .footer-container {
@@ -194,6 +234,7 @@ button {
   margin: 40px;
   background-color: whitesmoke;
   padding: 25px;
+  color: #343A40;
 }
 
 #flight-div {
@@ -203,6 +244,7 @@ button {
   margin: 40px;
   background-color: whitesmoke;
   padding: 25px;
+  color: #343A40;
 }
 
 #local-events {
